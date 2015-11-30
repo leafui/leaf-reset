@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>leaf-grid Browser Tests</title>
+  <link href="../bower_components/mocha/mocha.css" rel="stylesheet">
+  <link href="leaf-reset.css" rel="stylesheet">
+</head>
+<body>
+  <div id="mocha"></div>
+  <header>
+    <h1>H1</h1>
+    <h2>H2</h2>
+  </header>
+  <hr>
+  <nav>
+    <form action="">
+      <fieldset>
+        <input type="search">
+        <input type="submit" value="Search">
+      </fieldset>
+    </form>
+  </nav>
+  <hr>
+  <section>
+    <div>
+      <p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Nullam ligula justo, interdum at tincidunt vel, hendrerit in erat. Integer vel velit consequat, tempus orci quis, auctor eros. Nunc eget commodo sapien. Ut ultrices vitae lorem in commodo. Proin aliquam tortor eget arcu molestie sollicitudin. Vestibulum viverra dui nunc, sit amet semper metus vehicula vitae. Quisque vulputate sit amet justo vel placerat. Fusce in libero elementum, scelerisque ipsum vitae, feugiat lacus.</p>
+      <p><small>Small</small></p>
+    </div>
+  </section>
+  <script src="../bower_components/mocha/mocha.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="../bower_components/chai/chai.js"></script>
+  <script src="testBundle.js"></script>
+  <script>
+    if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+      onload = function(){
+        var runner = mocha.run();
+
+        var failedTests = [];
+        runner.on('end', function(){
+          window.mochaResults = runner.stats;
+          window.mochaResults.reports = failedTests;
+        });
+
+        runner.on('fail', logFailure);
+
+        function logFailure(test, err){
+
+          var flattenTitles = function(test){
+            var titles = [];
+            while (test.parent.title){
+              titles.push(test.parent.title);
+              test = test.parent;
+            }
+            return titles.reverse();
+          };
+
+          failedTests.push({name: test.title, result: false, message: err.message, stack: err.stack, titles: flattenTitles(test) });
+        };
+      };
+    }
+  </script>
+</body>
+</html>
