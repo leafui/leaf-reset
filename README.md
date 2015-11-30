@@ -9,6 +9,8 @@ Part of the core of the Leaf UI.
 
 Yet another [CSS reset](http://stackoverflow.com/questions/11578819/css-reset-what-exactly-does-it-do).
 
+**Disclaimer:** This is no CSS "silver bullet". You should still design your CSS to be cross-browser. You may use this file to bootstrap your applications.
+
 The idea is to reset styles before applying changes in the page. It helps prevent differences in default styling across browsers.
 
 ## <a href="#" id="install"></a>Install
