@@ -7,7 +7,7 @@
 
 Part of the core of the Leaf UI.
 
-Yet another [CSS reset]().
+Yet another [CSS reset](http://stackoverflow.com/questions/11578819/css-reset-what-exactly-does-it-do).
 
 The idea is to reset styles before applying changes in the page. It helps prevent differences in default styling across browsers.
 
@@ -23,7 +23,7 @@ If you don't use bower you can manually use it by just grabbing the file inside 
 
 ### Leaf philosophy
 
-As with other Leaf core components this one is written in [SCSS]().
+As with other Leaf core components this one is written in [SCSS](http://sass-lang.com/guide).
 
 Please check the [CONTRIBUTING](CONTRIBUTING.md) guide for info on code style.
 
