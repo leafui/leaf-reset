@@ -1,0 +1,36 @@
+{
+  "name": "leaf-reset",
+  "version": "0.1.0",
+  "authors": [
+    "Matheus Kautzmann <matheus@fluidrobot.com>"
+  ],
+  "description": "A reset file to use in modern front-end projects",
+  "main": [
+    "dist/leaf-reset.min.css"
+  ],
+  "keywords": [
+    "reset",
+    "leaf",
+    "UI"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/leafui/leaf-reset",
+  "ignore": [
+    "**/.*",
+    "circle.yml",
+    "browserSupport.json",
+    "coffeelint.json",
+    "CONTRIBUTING.md",
+    "demo",
+    "Gemfile.lock",
+    "Gemfile",
+    "Gruntfile.coffee",
+    "node_modules",
+    "scss-lint.yml",
+    "test"
+  ],
+  "devDependencies": {
+    "chai": "~3.4.1",
+    "mocha": "~2.3.4"
+  }
+}
