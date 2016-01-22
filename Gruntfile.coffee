@@ -128,6 +128,14 @@ module.exports = (grunt) ->
       }
     }
 
+    # Copy raw SCSS and distribute
+    copy: {
+      main: {
+        src: 'src/leaf-reset.scss'
+        dest: 'dist/_leaf-reset.scss'
+      }
+    }
+
     # Put banner in dist files
     usebanner: {
       taskName: {
@@ -137,7 +145,7 @@ module.exports = (grunt) ->
           linebreak: true
         },
         files: {
-          src: ['dist/*.css']
+          src: ['dist/*.css', 'dist/*.scss']
         }
       }
     }
@@ -233,6 +241,7 @@ module.exports = (grunt) ->
     'sass:dist'
     'postcss:distProd'
     'docs'
+    'copy'
     'usebanner'
   ])
   if process.env.CI

@@ -1,0 +1,276 @@
+/*leaf-reset@0.1.0*/
+////
+/// leaf-reset
+/// A reset file to use in modern front-end projects
+/// MIT License
+/// @group leaf-reset
+/// @author Matheus R. Kautzmann <matheus@fluidrobot.com>
+////
+
+/// Default border color
+/// @type Color
+/// @access public
+/// @since 0.1.0
+$default-border-color: #000;
+
+
+// Setting box model to border-box, prevent jump scrolling and normalize font
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-y: scroll;
+}
+
+// Inherit box model from html tag making all elements behave the same way
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+// Normalizing appereance of block elements on browsers
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+// Make page elements block by default
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
+
+// Normalize the positioning across browsers
+audio,
+canvas,
+progress,
+video {
+  vertical-align: baseline;
+}
+
+// Make sure that it's hidden
+[hidden],
+template {
+  display: none;
+}
+
+// Remove list prepending disc/circle
+ol,
+ul { list-style: none; }
+
+// Normalize quotes
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+// Normalize links
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-size: 100%;
+  background: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+del { text-decoration: line-through; }
+dfn { font-style: italic; }
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted $default-border-color;
+  cursor: help;
+}
+
+// Normalize table borders
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Normalize table header
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+// Normalize table cell
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+// Normalize the hr tag
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid lighten($default-border-color, 50);
+  margin: 1rem 0;
+  padding: 0;
+}
+
+// Normalize sub and sup
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+}
+
+// Normalize commom form inputs across browsers
+input,
+select,
+textarea {
+  font-size: 99%;
+  vertical-align: middle;
+}
+
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+
+label,
+input[type="button"],
+input[type="submit"],
+input[type="file"],
+button {
+  cursor: pointer;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button {
+  -webkit-appearance: button;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+// Other tweaks to help ensure consistent UI across browsers
+audio:not([controls]) { display: none; }
+body { line-height: 1; }
+img { border: 0; }
+input[type="search"] { -webkit-appearance: textfield; }
+small { font-size: 85%; }
+strong { font-weight: bold; }
+sub { bottom: -.25em; }
+sup { top: -.5em; }
+svg:not(:root) { overflow: hidden; }
+textarea { overflow: auto; }
